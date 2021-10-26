@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap");
+
+:root {
+  --primaryBlack: #000000;
+  --secondaryBlack: #333333;
+  --primaryWhite: #ffffff;
+  --lightGrey: #efefef;
+  --grey: #bfbfbf;
+  --steelblue: #2f454e;
+  --paleblue: #2b8ead;
+  --seagreen: #6f98a8;
+  --turquoise: #72c3dc;
+}
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.header,
+.footer {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+.header {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.footer {
+  font-size: 0.8rem;
+  font-style: italic;
+  max-width: 960px;
+  background-color: var(--lightGrey);
+  margin: auto;
+}
+.main {
+  display: flex;
+  max-width: 960px;
+  height: 70vh;
+  margin: auto;
+  background-color: var(--lightGrey);
+  border-top: 4px solid var(--grey);
+  color: var(--primaryWhite);
+}
+.main .cardSection {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.main .controlSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardSection:empty {
+  background-color: var(--grey);
+}
+.controlSection button {
+  display: block;
+  width: 130px;
+  height: 40px;
+  margin-top: 20px;
+  background-color: var(--turquoise);
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-bottom: 4px solid var(--paleblue);
+  color: var(--primaryWhite);
+  font-weight: bold;
+}
+.cardSection [class^="card-"] {
+  height: 100%;
+  padding: 3rem;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 5rem;
+  color: var(--primaryWhite);
+}
+.card-1,
+.card-8 {
+  background-color: var(--seagreen);
+}
+.card-2,
+.card-4 {
+  background-color: var(--paleblue);
+}
+.card-3,
+.card-5,
+.card-9 {
+  background-color: var(--steelblue);
+}
+.card-6,
+.card-7 {
+  background-color: var(--grey);
+}
