@@ -1,6 +1,6 @@
 # Assignment - Shuffle and Sort
 
-Submission date : 27th Nov 2021
+Submission date : 27th Nov 2021.
 The objective is to create a responsive web app using only HTML, CSS and JavaScript.
 
 # Reviewer Help
