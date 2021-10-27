@@ -72,7 +72,7 @@ const APP = (function () {
      * @param {number/string} cardVal The card value
      */
     const getCardHtml = (cardVal) => {
-        return `<div class="card-${cardVal}">${cardVal}</div>`;
+        return `<div tabindex="0" class="card-${cardVal}">${cardVal}</div>`;
     }
 
     /**

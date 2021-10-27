@@ -23,8 +23,6 @@
 }
 html {
   font-size: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 .header,
 .footer {
@@ -81,11 +79,13 @@ html {
   font-weight: bold;
 }
 .cardSection [class^="card-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
-  padding: 3rem;
   text-align: center;
   font-weight: bolder;
-  font-size: 5rem;
+  font-size: 4rem;
   color: var(--primaryWhite);
 }
 .card-1,
@@ -104,4 +104,65 @@ html {
 .card-6,
 .card-7 {
   background-color: var(--grey);
+}
+@media screen and (max-width: 600px) {
+  .header {
+    color: var(--primaryWhite);
+    background-color: var(--secondaryBlack);
+  }
+  .main {
+    flex-direction: column-reverse;
+    background-color: var(--primaryWhite);
+    padding: 5px;
+    height: calc(100vh - 100px);
+    border-top: 0;
+  }
+  .main .cardSection {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 1;
+  }
+  .main .controlSection {
+    height: 80px;
+    flex: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .controlSection button {
+    margin: 0 10px;
+    width: 100px;
+  }
+  .cardSection [class^="card-"] {
+    padding: 0.8rem;
+    font-size: 1.3rem;
+    background-color: var(--lightGrey);
+    color: var(--primaryBlack);
+    height: auto;
+    margin-bottom: 2px;
+    flex: 1;
+  }
+  .card-1,
+  .card-8 {
+    border-left: 4px solid var(--seagreen);
+  }
+  .card-2,
+  .card-4 {
+    border-left: 4px solid var(--paleblue);
+  }
+  .card-3,
+  .card-5,
+  .card-9 {
+    border-left: 4px solid var(--steelblue);
+  }
+  .card-6,
+  .card-7 {
+    border-left: 4px solid var(--grey);
+  }
+}
+@media screen and (max-width: 375px) {
+  .main {
+    height: 100vh;
+  }
 }
